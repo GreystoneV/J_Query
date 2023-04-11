@@ -8,7 +8,9 @@
 
 
 <script>
+    // selecting the doc
     $(document).ready(function () {
+        //selecting the element and what to append
         $("html").append(
             "<body>\
                 <div id='container'>\
@@ -25,13 +27,17 @@
                 </div>\
                 </body > "
         );
+        //makes paragraph with id 2 red
         $("#2").css({ "color": "red" });
+        //makes paragraph with id 3 hide
         $("#3").click(function () {
             $("h1").hide();
         });
+        //hides h2 when clicked, over 3 seconds
         $("h2").click(function () {
             $("h2").hide(3000);
         });
+        // slides all the paragraph elemnts to hidden over 2 seconds
         $(".slider").click(function () {
             $('p').slideUp(2000);
         })
